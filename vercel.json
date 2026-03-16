@@ -1,0 +1,9 @@
+{
+    "name": "invited-silviaana",
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/"
+        }
+    ]
+}
