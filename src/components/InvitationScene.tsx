@@ -52,7 +52,7 @@ export default function InvitationScene({ onNext }: InvitationSceneProps) {
                             className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-purple-500 drop-shadow-sm px-4"
                             style={{ fontFamily: "var(--font-playfair)" }}
                         >
-                            Silviaana Santika Wijaya
+                            Silvianna Santika Wijaya
                         </motion.h1>
 
                         {/* Sparkle Lottie around text */}

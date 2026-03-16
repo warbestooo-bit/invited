@@ -8,7 +8,7 @@ interface MessageSceneProps {
 }
 
 export default function MessageScene({ onNext }: MessageSceneProps) {
-    const fullText = `Selamat ulang tahun Silviaana.\n\nSemoga hari ini dipenuhi dengan kebahagiaan, tawa, dan cinta.\n\nTerima kasih sudah menjadi seseorang yang begitu spesial.`;
+    const fullText = `Selamat ulang tahun Silvianna.\n\nSemoga hari ini dipenuhi dengan kebahagiaan, tawa, dan cinta.\n\nTerima kasih sudah menjadi seseorang yang begitu spesial.`;
     const [displayedText, setDisplayedText] = useState("");
     const [index, setIndex] = useState(0);
 

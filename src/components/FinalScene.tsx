@@ -64,7 +64,7 @@ export default function FinalScene() {
                     Once again,
                 </h2>
                 <h1 className="text-5xl md:text-7xl font-black text-rose-500 cinematic-text drop-shadow-xl mb-6">
-                    Happy Birthday Silviaana <span className="text-rose-400">❤️</span>
+                    Happy Birthday Silvianna <span className="text-rose-400">❤️</span>
                 </h1>
                 <motion.p
                     initial={{ opacity: 0 }}

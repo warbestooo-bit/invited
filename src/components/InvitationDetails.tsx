@@ -43,7 +43,7 @@ export default function InvitationDetails({ onNext }: InvitationDetailsProps) {
                             className="text-2xl md:text-3xl font-bold text-pink-900 leading-tight"
                             style={{ fontFamily: "var(--font-playfair)" }}
                         >
-                            Silviaana Santika Wijaya
+                            Silvianna Santika Wijaya
                         </motion.h2>
                     </div>
 
@@ -85,7 +85,7 @@ export default function InvitationDetails({ onNext }: InvitationDetailsProps) {
                         className="text-center bg-pink-500/10 py-4 rounded-2xl border border-pink-500/20"
                     >
                         <span className="text-pink-600 font-bold text-sm block mb-1">💖 Happy Birthday 🎂</span>
-                        <span className="text-pink-900 font-semibold text-xs tracking-wider">SILVIAANA SANTIKA WIJAYA</span>
+                        <span className="text-pink-900 font-semibold text-xs tracking-wider">Silvianna Santika Wijaya</span>
                     </motion.div>
                 </div>
             </motion.div>

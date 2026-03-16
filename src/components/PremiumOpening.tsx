@@ -82,7 +82,7 @@ export default function PremiumOpening({ onOpen }: PremiumOpeningProps) {
                         className="text-5xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-pink-500 to-purple-500 drop-shadow-sm leading-tight"
                         style={{ fontFamily: "var(--font-playfair)" }}
                     >
-                        Silviaana Santika Wijaya
+                        Silvianna Santika Wijaya
                     </h1>
                 </motion.div>
 

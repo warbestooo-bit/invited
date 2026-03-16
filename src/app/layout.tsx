@@ -13,8 +13,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Birthday Invitation | Silviaana Santika Wijaya",
-  description: "A special cinematic birthday invitation for Silviaana Santika Wijaya.",
+  title: "Birthday Invitation | Silvianna Santika Wijaya",
+  description: "A special cinematic birthday invitation for Silvianna Santika Wijaya.",
   viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0",
 };
 
