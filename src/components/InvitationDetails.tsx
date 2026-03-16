@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Clock, Star, Heart } from "lucide-react";
+import { MapPin, Clock, Star, Heart, Shirt } from "lucide-react";
+import Image from "next/image";
 
 import CountdownTimer from "./CountdownTimer";
 
@@ -15,34 +16,34 @@ export default function InvitationDetails({ onNext }: InvitationDetailsProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="relative flex flex-col items-center justify-center w-full h-screen bg-gradient-to-b from-rose-50 to-pink-100 overflow-hidden px-6 pt-10"
+            className="relative flex flex-col items-center justify-center w-full min-h-screen bg-gradient-to-b from-rose-50 to-pink-100 py-10 px-6 overflow-y-auto"
         >
             <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8 }}
-                className="w-full max-w-sm bg-pink-100 border-4 border-pink-200 rounded-[2.5rem] p-8 shadow-[0_20px_50px_rgba(244,114,182,0.3)] relative overflow-hidden"
+                className="w-full max-w-sm bg-pink-100 border-4 border-pink-200 rounded-[2.5rem] p-6 shadow-[0_20px_50px_rgba(244,114,182,0.3)] relative overflow-hidden my-auto"
             >
                 {/* Decorative corner background */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-pink-300/10 rounded-full -mr-10 -mt-10 blur-2xl" />
                 <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-300/10 rounded-full -ml-10 -mb-10 blur-2xl" />
 
-                <div className="relative z-10 space-y-8">
+                <div className="relative z-10 space-y-6">
                     {/* Header */}
                     <div className="text-center space-y-2">
                         <motion.div
                             initial={{ y: -10, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 0.3 }}
-                            className="flex justify-center items-center gap-2 text-rose-500 font-bold tracking-widest text-xs uppercase"
+                            className="flex justify-center items-center gap-2 text-rose-500 font-bold tracking-widest text-[10px] uppercase"
                         >
-                            <Star size={14} fill="currentColor" /> Birthday Celebration
+                            <Star size={12} fill="currentColor" /> Birthday Celebration
                         </motion.div>
                         <motion.h2
                             initial={{ y: -10, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 0.4 }}
-                            className="text-2xl md:text-3xl font-bold text-pink-900 leading-tight"
+                            className="text-xl md:text-2xl font-bold text-pink-900 leading-tight"
                             style={{ fontFamily: "var(--font-playfair)" }}
                         >
                             Silvianna Santika Wijaya
@@ -51,21 +52,21 @@ export default function InvitationDetails({ onNext }: InvitationDetailsProps) {
 
                     {/* Countdown Timer */}
                     <div className="py-2 border-y border-pink-200/50">
-                        <p className="text-[10px] text-pink-400 font-bold uppercase tracking-widest text-center mb-2">Countdown Event</p>
+                        <p className="text-[9px] text-pink-400 font-bold uppercase tracking-widest text-center mb-1">Countdown Event</p>
                         <CountdownTimer targetDate="2026-03-17T17:00:00+07:00" />
                     </div>
 
                     {/* Timeline Items */}
-                    <div className="space-y-6">
+                    <div className="space-y-4">
                         <TimelineItem
-                            icon={<MapPin size={18} />}
+                            icon={<MapPin size={16} />}
                             title="Tiluwan Coffee"
                             time="17:00 – 19:00"
                             description="Romantic dinner & birthday moment bersama."
                             delay={0.5}
                         />
                         <TimelineItem
-                            icon={<Star size={18} />}
+                            icon={<Star size={16} />}
                             title="Photobooth"
                             time="20:00 – 20:30"
                             description="Mengabadikan momen spesial dengan foto kenangan."
@@ -73,27 +74,39 @@ export default function InvitationDetails({ onNext }: InvitationDetailsProps) {
                         />
                     </div>
 
-                    {/* Closing Text */}
+                    {/* Dresscode Section */}
                     <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7 }}
-                        className="text-center pt-4 border-t border-pink-200/50"
+                        className="bg-white/40 p-3 rounded-2xl border border-pink-200/30 overflow-hidden"
                     >
-                        <p className="text-pink-800/70 text-sm italic leading-relaxed">
-                            "Malam ditutup dengan kebersamaan dan kenangan indah dari hari yang spesial."
-                        </p>
+                        <div className="flex items-center gap-2 mb-2 text-pink-700">
+                            <Shirt size={16} />
+                            <span className="text-[10px] font-bold uppercase tracking-widest">Dresscode</span>
+                        </div>
+                        <div className="flex flex-col gap-2">
+                            <span className="text-pink-900 font-bold text-xs uppercase tracking-wider">Brown Monochrome</span>
+                            <div className="relative w-full h-24 rounded-xl overflow-hidden shadow-inner">
+                                <Image
+                                    src="/dresscode.png"
+                                    alt="Brown Monochrome Dresscode Inspiration"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+                        </div>
                     </motion.div>
 
                     {/* Bday Greeting */}
                     <motion.div
                         initial={{ scale: 0.8, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
-                        transition={{ delay: 1, type: "spring" }}
-                        className="text-center bg-pink-500/10 py-4 rounded-2xl border border-pink-500/20"
+                        transition={{ delay: 0.8, type: "spring" }}
+                        className="text-center bg-pink-500/10 py-3 rounded-2xl border border-pink-500/20"
                     >
-                        <span className="text-pink-600 font-bold text-sm block mb-1">💖 Happy Birthday 🎂</span>
-                        <span className="text-pink-900 font-semibold text-xs tracking-wider">Silvianna Santika Wijaya</span>
+                        <span className="text-pink-600 font-bold text-xs block mb-1">💖 Happy Birthday 🎂</span>
+                        <span className="text-pink-900 font-bold text-[9px] tracking-widest uppercase">Silvianna Santika Wijaya</span>
                     </motion.div>
                 </div>
             </motion.div>
