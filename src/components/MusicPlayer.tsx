@@ -61,15 +61,24 @@ export default function MusicPlayer() {
             />
             <button
                 onClick={togglePlay}
-                className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/30 shadow-lg group hover:bg-white/40 transition-all active:scale-90"
+                className="w-14 h-14 bg-pink-500/90 backdrop-blur-xl rounded-full flex flex-col items-center justify-center text-white border-2 border-white/50 shadow-[0_0_20px_rgba(244,114,182,0.5)] group hover:bg-pink-600 transition-all active:scale-90 relative"
             >
-                {isPlaying ? (
-                    <Volume2 size={20} className="animate-pulse" />
-                ) : (
-                    <VolumeX size={20} />
-                )}
-                <span className="absolute right-14 text-[10px] tracking-widest uppercase bg-black/40 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                    {isPlaying ? "Mute" : "Play"}
+                <div className="relative">
+                    {isPlaying ? (
+                        <Volume2 size={24} className="animate-pulse" />
+                    ) : (
+                        <VolumeX size={24} className="opacity-80" />
+                    )}
+                </div>
+
+                {/* Always visible label for clarity */}
+                <span className="text-[7px] font-bold tracking-tighter uppercase mt-0.5 opacity-90 group-hover:scale-110 transition-transform">
+                    Music
+                </span>
+
+                {/* Floating Tooltip */}
+                <span className="absolute -bottom-10 right-0 text-[9px] tracking-widest uppercase bg-pink-900/80 text-white px-2 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-md">
+                    {isPlaying ? "Click to Mute" : "Click to Play"}
                 </span>
             </button>
         </div>
