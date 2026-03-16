@@ -15,7 +15,16 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Birthday Invitation | Silvianna Santika Wijaya",
   description: "A special cinematic birthday invitation for Silvianna Santika Wijaya.",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0",
+  icons: {
+    icon: "/icon.svg",
+  },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({
