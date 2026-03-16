@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { MapPin, Clock, Star, Heart } from "lucide-react";
 
+import CountdownTimer from "./CountdownTimer";
+
 interface InvitationDetailsProps {
     onNext?: () => void;
 }
@@ -45,6 +47,12 @@ export default function InvitationDetails({ onNext }: InvitationDetailsProps) {
                         >
                             Silvianna Santika Wijaya
                         </motion.h2>
+                    </div>
+
+                    {/* Countdown Timer */}
+                    <div className="py-2 border-y border-pink-200/50">
+                        <p className="text-[10px] text-pink-400 font-bold uppercase tracking-widest text-center mb-2">Countdown Event</p>
+                        <CountdownTimer targetDate="2026-03-17T17:00:00+07:00" />
                     </div>
 
                     {/* Timeline Items */}
